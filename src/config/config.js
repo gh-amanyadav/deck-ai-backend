@@ -33,6 +33,9 @@ const config = {
     timeout: parseInt(process.env.REQUEST_TIMEOUT || '10000', 10),
   },
 
+  // Security configuration
+  jwtSecret: process.env.JWT_SECRET,
+
   // Feature flags
   isDevelopment: process.env.NODE_ENV === 'development',
   isProduction: process.env.NODE_ENV === 'production',
